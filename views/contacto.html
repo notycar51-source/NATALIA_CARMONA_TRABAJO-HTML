@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!--Configuración responsive-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto</title>
+  <link rel="icon" type="image/png" href="../img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+     <!--Cabecera-->
+  <header>
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../img/logo.png" alt="Logo Estudio Creativo" width="1518" height="1034">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Portafolio</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="formulario.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <section class="formulario">
+    <!-- Título principal del formulario -->
+    <h2>Contacto</h2>
+
+    <!-- Inicio del formulario -->
+    <form action="#" method="post">
+
+      <!-- Nombre: solo letras y espacios, entre 2 y 30 caracteres -->
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre"
+             pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,30}"
+             title="El nombre debe tener entre 2 y 30 letras"
+             required>
+
+      <!-- Email: formato estándar -->
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email"
+             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+             title="Introduce un correo válido (ejemplo@dominio.com)"
+             required>
+
+      <!-- Teléfono: exactamente 9 dígitos -->
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono"
+             pattern="[0-9]{9}" inputmode="numeric"
+             title="El teléfono debe contener exactamente 9 dígitos"
+             required>
+
+      <!-- Mensaje: mínimo 10 caracteres, máximo 300 -->
+      <!-- Se usa <input type="text"> en lugar de <textarea> para que W3C valide el atributo pattern -->
+      <label for="mensaje">Mensaje:</label>
+      <input type="text" id="mensaje" name="mensaje"
+             pattern=".{10,300}"
+             maxlength="300"
+             title="El mensaje debe tener entre 10 y 300 caracteres"
+             required>
+
+      <!-- Checkbox de privacidad -->
+      <fieldset>
+        <legend>Privacidad</legend>
+        <label for="privacidad" class="checkbox-label">
+          <input type="checkbox" id="privacidad" name="privacidad" required
+                 title="Debe aceptar la Política de Privacidad para continuar">
+          Acepto la Política de Privacidad
+        </label>
+      </fieldset>
+
+      <!-- Botón de envío -->
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+
+ <!-- == Footer == -->
+<footer>
+  <section class="redes-sociales" aria-label="Redes sociales">
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <img src="../img/imgsocialfacebook.png" alt="Facebook" width="2000" height="2000">
+    </a>
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+      <img src="../img/imgsocialtwitter.png" alt="Twitter" width="1024" height="1024">
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <img src="../img/imgsocialinstagram.png" alt="Instagram" width="3600" height="3600">
+    </a>
+  </section>
+
+  <section id="ubicacion">
+    <h2>Ubicación</h2>
+    <img src="../img/mapa.jpg" alt="Mapa con la ubicación del Estudio Creativo en Murcia" width="384" height="200">
+    <p>Calle Ejemplo 123, Murcia</p>
+  </section>
+
+  <p><small><a href="views/aviso-legal.html">Aviso Legal</a></small></p>
+</footer>

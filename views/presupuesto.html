@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!--Configuración responsive-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto</title>
+  <link rel="icon" type="image/png" href="../img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <!--Cabecera-->
+  <header>
+      <div class="logo">
+  <a href="../index.html">
+    <img src="../img/logo.png" alt="Logo Estudio Creativo">
+  </a>
+</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html">Portafolio</a></li>
+        <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <!-- Título principal del formulario -->
+  <h2>Solicite su presupuesto</h2>
+
+  <!-- Formulario: se usa POST para enviar datos -->
+  <form action="#" method="post">
+    
+    <!-- Agrupación de datos de contacto -->
+    <fieldset>
+      <legend>Datos de contacto</legend>
+      
+      <!-- Campo: Nombre o Email se permite introducir un nombre (solo letras y espacios) o un email válido -->
+      <label for="nombre">Nombre o Email:</label>
+      <input type="text" id="nombre" name="nombre" required
+             pattern="([A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,50}|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,})"
+             placeholder="Ej: Juan Pérez o juan@email.com"
+             title="Introduzca un nombre válido (solo letras y espacios) o un email correcto">
+      
+      <!-- Campo: Teléfono obligatorio, entre 9 y 15 dígitos, sin espacios -->
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required
+             pattern="[0-9]{9,15}" inputmode="numeric" aria-describedby="telHelp"
+             title="Introduzca entre 9 y 15 dígitos sin espacios">
+      <!-- Texto de ayuda accesible -->
+      <small id="telHelp">Introduzca entre 9 y 15 dígitos sin espacios</small>
+    </fieldset>
+
+    <!-- Campo: Información adicional obligatorio, mínimo 10 caracteres -->
+<label for="info">Solicite más información:</label>
+<input type="text" id="info" name="info"
+       pattern=".{10,}"
+       maxlength="300"
+       placeholder="Describa su solicitud..."
+       title="Debe escribir al menos 10 caracteres"
+       required>
+
+
+    <!-- Sección de privacidad checkbox obligatorio para cumplir con la política de privacidad -->
+    <fieldset>
+      <legend>Privacidad</legend>
+      <label for="privacidad" class="checkbox-label">
+        <input type="checkbox" id="privacidad" name="privacidad" required
+               title="Debe aceptar la Política de Privacidad para continuar">
+        Acepto la Política de Privacidad
+      </label>
+    </fieldset>
+
+    <!-- Botón de envío -->
+    <button type="submit">Enviar</button>
+  </form>
+</main>
+
+ <!-- == Footer == -->
+ <footer>
+  <section class="redes-sociales" aria-label="Redes sociales">
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <img src="../img/imgsocialfacebook.png" alt="Facebook" width="2000" height="2000">
+    </a>
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+      <img src="../img/imgsocialtwitter.png" alt="Twitter" width="1024" height="1024">
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <img src="../img/imgsocialinstagram.png" alt="Instagram" width="3600" height="3600">
+    </a>
+  </section>
+
+  <section id="ubicacion">
+    <h2>Ubicación</h2>
+    <img src="../img/mapa.jpg" alt="Mapa con la ubicación del Estudio Creativo en Murcia" width="384" height="200">
+    <p>Calle Ejemplo 123, Murcia</p>
+  </section>
+
+  <p><small><a href="views/aviso-legal.html">Aviso Legal</a></small></p>
+</footer>
